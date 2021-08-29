@@ -6,10 +6,12 @@ import MoreVert from '@material-ui/icons/MoreVert';
 import IconButton from '@material-ui/core/IconButton';
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
-import { Button, Switch } from '@material-ui/core';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import Switch from '@material-ui/core/Switch';
 
-import Dropdown from '../shared/Dropdown/Dropdown';
-import Logo from '../shared/Logo/Logo';
+import Dropdown from '../shared/Dropdown';
+import Logo from '../shared/Logo';
 
 import truckLogo from '../../assets/images/truck.png';
 import sunLogo from '../../assets/images/sun.png';
@@ -30,13 +32,12 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     fontSize: '48px',
-    color: 'inherit',
   },
   logoSection: {
     height: '64px',
     display: 'flex',
     alignItems: 'center',
-    filter: 'grayscale(1) invert(1)',
+    // filter: 'grayscale(1) invert(1)',
   },
   logoContainer: {
     display: 'flex',
@@ -47,14 +48,12 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-between',
     alignItems: 'center',
     height: '100%',
-    color: 'inherit',
   },
   toolbarGrid: {
     height: '100%',
   },
   navbutton: {
     fontSize: 'inherit',
-    color: 'inherit',
   },
   sunLogo: {
     height: '80%',
@@ -97,7 +96,9 @@ const Navbar = (props) => {
               </Dropdown>
             </Grid>
             <Grid item xs={4} className={classes.search}>
-              <span>צהריים טובים אלון!</span>
+              <Typography variant="h5" gutterBottom>
+                צהריים טובים אלון!
+              </Typography>
               <div className={classes.sunLogo}>
                 <Logo src={sunLogo} />
               </div>

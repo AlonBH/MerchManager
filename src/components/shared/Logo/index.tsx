@@ -1,6 +1,10 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
+type Props = {
+  src: string
+}
+
 const useStyles = makeStyles((theme) => ({
   root: {
     height: '100%',
@@ -10,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Logo = (props) => {
+const Logo = (props: Props) => {
   const classes = useStyles();
 
   return (
