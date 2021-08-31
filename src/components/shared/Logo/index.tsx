@@ -5,7 +5,7 @@ type Props = {
   src: string
 }
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(_ => ({
   root: {
     height: '100%',
     '& img': {
