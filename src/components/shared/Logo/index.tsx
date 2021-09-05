@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
 type Props = {
-  src: string
+  src: typeof import("*.png")
 }
 
 const useStyles = makeStyles(_ => ({
@@ -19,7 +19,7 @@ const Logo = (props: Props) => {
 
   return (
     <div className={classes.root}>
-      <img src={props.src} />
+      <img src={props.src.default} />
     </div>
   );
 };
