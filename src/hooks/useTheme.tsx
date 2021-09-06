@@ -1,38 +1,14 @@
 import React from 'react';
 import createTheme, { ThemeOptions } from '@material-ui/core/styles/createTheme';
-import {
-  orange,
-  lightBlue,
-  deepOrange,
-  deepPurple,
-} from '@material-ui/core/colors';
+
+import themes from './themes';
 
 const useTheme = (): ThemeOptions => {
   switch(process.env.NODE_ENV){
     case 'development':
-      return createTheme({
-        palette: {
-          type: 'dark',
-          primary: {
-            main: deepOrange[900],
-          },
-          secondary: {
-            main: deepPurple[500],
-          },
-        },
-      });
+      return createTheme(themes.devTheme as ThemeOptions);
     case 'production':
-      return createTheme({
-        palette: {
-          type: 'light',
-          primary: {
-            main: orange[500],
-          },
-          secondary: {
-            main: lightBlue[500],
-          },
-        },
-      });
+      return createTheme(themes.prodTheme as ThemeOptions);
     default:
       return createTheme();
   }
