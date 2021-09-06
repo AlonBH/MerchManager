@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
 type Props = {
-  src: typeof import("*.png")
+  src: typeof import("*.png") | typeof import("*.jpeg") | typeof import("*.jpg")
 }
 
 const useStyles = makeStyles(_ => ({

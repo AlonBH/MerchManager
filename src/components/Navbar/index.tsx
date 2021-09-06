@@ -12,8 +12,7 @@ import {
   Grid,
 } from '@material-ui/core';
 
-import Logo from '../shared/Logo';
-import Dropdown from '../shared/Dropdown';
+import { Logo, Dropdown } from '../shared/index';
 
 import { truckImg, sunImg } from '../../assets/images';
 

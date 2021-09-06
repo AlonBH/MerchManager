@@ -1,2 +1,7 @@
-export * as Dropdown from './Dropdown';
-export * as Logo from './Logo';
+import Dropdown from './Dropdown';
+import Logo from './Logo';
+
+export {
+    Dropdown, 
+    Logo
+}
