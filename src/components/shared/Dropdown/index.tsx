@@ -1,6 +1,7 @@
 import React, { useRef, useState, MouseEvent, KeyboardEvent } from 'react';
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import { Grow, Paper, Popper, MenuItem, MenuList } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 type Props = {
   items: { name: string }[];
@@ -59,9 +60,11 @@ const Dropdown = ({ items, children }: Props) => {
                   onKeyDown={handleListKeyDown}
                 >
                   {items.map((item: { name: string }) => (
+                    <Link to="/gazaExportRequests">
                     <MenuItem key={item.name} onClick={handleClose}>
                       {item.name}
                     </MenuItem>
+                    </Link>
                   ))}
                 </MenuList>
               </ClickAwayListener>

@@ -1,7 +1,7 @@
 import React from 'react';
-import {makeStyles, ThemeOptions } from '@material-ui/core';
+import {makeStyles, Theme } from '@material-ui/core';
 
-export const useStyles = makeStyles((theme: ThemeOptions) => ({
+export const useStyles = makeStyles((theme: Theme) => ({
     root: {
       flexGrow: 1,
       height: '64px',
@@ -13,7 +13,7 @@ export const useStyles = makeStyles((theme: ThemeOptions) => ({
       height: '64px',
     },
     menuButton: {
-      // marginRight: theme.spacing(2),
+      marginRight: theme.spacing(2),
     },
     title: {
       fontSize: '48px',
