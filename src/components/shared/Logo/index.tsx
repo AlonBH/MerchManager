@@ -1,18 +1,10 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+
+import useStyles from './styles';
 
 type Props = {
   src: typeof import("*.png") | typeof import("*.jpeg") | typeof import("*.jpg")
 }
-
-const useStyles = makeStyles(_ => ({
-  root: {
-    height: '100%',
-    '& img': {
-      height: '100%'
-    }
-  },
-}));
 
 const Logo = (props: Props) => {
   const classes = useStyles();

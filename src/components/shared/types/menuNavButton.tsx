@@ -1,0 +1,1 @@
+export type menuNavButton = { name: string, link: string }

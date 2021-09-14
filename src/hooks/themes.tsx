@@ -6,7 +6,7 @@ import {
 } from '@material-ui/core/colors';
 
 export default {
-  devTheme: {
+  prodTheme: {
     palette: {
       type: 'dark',
       primary: {
@@ -17,7 +17,7 @@ export default {
       },
     },
   },
-  prodTheme: {
+  devTheme: {
     palette: {
       type: 'light',
       primary: {

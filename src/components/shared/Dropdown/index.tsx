@@ -5,20 +5,12 @@ import { Link } from 'react-router-dom';
 
 import { menuNavButton } from '../types/menuNavButton';
 
+import useStyles from './styles';
+
 type Props = {
   items: menuNavButton[];
   children: JSX.Element;
 };
-
-const useStyles = makeStyles(theme => ({
-  link: {
-    textDecoration: 'none',
-    color: theme.palette.text.primary
-  },
-  menu: {
-    zIndex: 1
-  }
-}));
 
 const Dropdown = ({ items, children }: Props) => {
   const classes = useStyles();

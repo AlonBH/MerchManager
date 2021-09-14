@@ -1,7 +1,7 @@
 import React from 'react';
 import {makeStyles, Theme } from '@material-ui/core';
 
-export const useStyles = makeStyles((theme: Theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
     root: {
       flexGrow: 1,
       height: '64px',
@@ -49,3 +49,5 @@ export const useStyles = makeStyles((theme: Theme) => ({
       alignItems: 'center',
     },
   }));
+
+  export default useStyles;
