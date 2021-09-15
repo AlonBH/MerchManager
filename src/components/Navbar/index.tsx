@@ -17,6 +17,8 @@ import { truckImg, sunImg } from '../../assets/images';
 
 import { exportMenu, moreOptionsMenu } from './data';
 
+import RequestSearch from './RequestSearch';
+
 import useStyles from './styles';
 
 const Navbar = () => {
@@ -27,7 +29,7 @@ const Navbar = () => {
       <AppBar position="static">
         <Toolbar className={classes.bar}>
           <Grid className={classes.toolbarGrid} container>
-            <Grid item xs={7} className={classes.logoContainer}>
+            <Grid item xs={6} className={classes.logoContainer}>
               <div className={classes.logoSection}>
                 <Logo src={truckImg} />
                 <span className={classes.title}>יובל</span>
@@ -39,18 +41,16 @@ const Navbar = () => {
                 <Button className={classes.navbutton}>ייבוא לרצועת עזה</Button>
               </Dropdown>
             </Grid>
-            <Grid item xs={4} className={classes.search}>
+            <Grid item xs={2} className={classes.greeting}>
               <Typography variant="h5" gutterBottom>
                 צהריים טובים אלון!
               </Typography>
               <div className={classes.sunLogo}>
                 <Logo src={sunImg} />
               </div>
-              <TextField
-                id="outlined-basic"
-                label="לפי מה לחפש?"
-                variant="outlined"
-              />
+            </Grid>
+            <Grid item xs={3} className={classes.search}>
+              <RequestSearch />
             </Grid>
             <Grid item xs={1} className={classes.actions}>
               <Dropdown items={moreOptionsMenu}>

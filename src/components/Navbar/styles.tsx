@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme: Theme) => ({
       display: 'flex',
       alignItems: 'center',
     },
-    search: {
+    greeting: {
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
@@ -42,6 +42,10 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
     sunLogo: {
       height: '80%',
+    },
+    search: {
+      display: 'flex',
+      justifyContent: 'flex-end'
     },
     actions: {
       display: 'flex',
