@@ -5,10 +5,12 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
+import { Link } from 'react-router-dom';
 
 type Props = {
   name: string;
   imgSrc: string;
+  link: string;
 };
 
 const useStyles = makeStyles({
@@ -20,10 +22,11 @@ const useStyles = makeStyles({
   },
 });
 
-const Queue = (props: Props) => {
+const QueuePreview = (props: Props) => {
   const classes = useStyles();
 
   return (
+    <Link to={props.link}>
     <Card className={classes.root}>
       <CardActionArea>
         <CardMedia className={classes.media} image={props.imgSrc} title={props.name} />
@@ -34,6 +37,7 @@ const Queue = (props: Props) => {
         </CardContent>
       </CardActionArea>
     </Card>
+    </Link>
   );
 };
-export default Queue;
+export default QueuePreview;

@@ -1,26 +1,34 @@
 import React from 'react';
 import { Grid, makeStyles } from '@material-ui/core';
-import Queue from '../../components/Queue';
+import { Switch, Route, useRouteMatch } from 'react-router-dom';
 
+import QueuePreview from '../../components/QueuePreview';
 import queues from './queues';
+import Queue from '../Queue';
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    
-  },
+  root: {},
 }));
 
 const RequestQueues = () => {
   const classes = useStyles();
+  let { path, url } = useRouteMatch();
 
   return (
-    <Grid container spacing={3} className={classes.root}>
-      {queues.map((queue) => (
-        <Grid item xs={3}>
-          <Queue name={queue.name} imgSrc={queue.img} />
+    <Switch>
+      <Route exact path={path}>
+        <Grid container spacing={3} className={classes.root}>
+          {queues.map(({ name, img, link }) => (
+            <Grid item xs={3}>
+              <QueuePreview name={name} imgSrc={img} link={`${url}/${link}`} />
+            </Grid>
+          ))}
         </Grid>
-      ))}
-    </Grid>
+      </Route>
+      <Route path={`${path}/:queueId`}>
+        <Queue />
+      </Route>
+    </Switch>
   );
 };
 
