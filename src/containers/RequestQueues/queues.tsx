@@ -1,30 +1,37 @@
 export default [
     {
         name: 'חקלאות',
-        img: './/././'
+        img: './/././',
+        link: 'agricultore'
     },
     {
         name: 'מגזר פרטי',
-        img: './/././'
+        img: './/././',
+        link: 'privateSector'
     },
     {
         name: 'איכות הסביבה',
-        img: './/././'
+        img: './/././',
+        link: 'environment'
     },
     {
         name: 'תחבורה',
-        img: './/././'
+        img: './/././',
+        link: 'transportation'
     },
     {
         name: 'אבחון שב״כ',
-        img: './/././'
+        img: './/././',
+        link: 'shabakDiagnosis'
     },
     {
         name: 'אבחון כימאי',
-        img: './/././'
+        img: './/././',
+        link: 'chemistDiagnosis'
     },
     {
         name: 'השלמת פרטים',
-        img: './/././'
+        img: './/././',
+        link: 'detailCompletion'
     }
 ]
