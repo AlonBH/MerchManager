@@ -13,7 +13,7 @@ import requestSearchOptions from './data';
 const RequestSearch = () => {
   const classes = useStyles();
   const [selectedOption, setSelectedOption] = useState('');
-  
+
   return (
     <form className={classes.root}>
       <FormControl variant="outlined" className={classes.formControl}>

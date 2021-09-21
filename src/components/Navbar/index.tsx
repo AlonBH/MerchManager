@@ -1,25 +1,20 @@
 import React from 'react';
-import MoreVert from '@material-ui/icons/MoreVert';
-import {
-  makeStyles,
-  IconButton,
-  TextField,
-  Typography,
-  Button,
-  Toolbar,
-  AppBar,
-  Grid,
-} from '@material-ui/core';
+import { Typography, Button, Toolbar, AppBar, Grid } from '@material-ui/core';
 
 import { Logo, Dropdown } from '../shared/index';
 
 import { truckImg, sunImg } from '../../assets/images';
 
-import { exportMenu, moreOptionsMenu } from './data';
-
 import RequestSearch from './RequestSearch';
+import MoreOptionsMenu from './RequestSearch/MoreOptionsMenu';
+import * as paths from '../../consts/paths';
 
 import useStyles from './styles';
+
+const exportMenu = [
+  { name: 'בקשות', link: paths.NEW_REQUEST },
+  { name: 'תיאומים', link: paths.MANAGE_ENTITIES },
+];
 
 const Navbar = () => {
   const classes = useStyles();
@@ -50,11 +45,7 @@ const Navbar = () => {
               <RequestSearch />
             </Grid>
             <Grid item xs={1} className={classes.actions}>
-              <Dropdown items={moreOptionsMenu}>
-                <IconButton>
-                  <MoreVert />
-                </IconButton>
-              </Dropdown>
+              <MoreOptionsMenu />
             </Grid>
           </Grid>
         </Toolbar>
