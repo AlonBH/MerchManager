@@ -37,9 +37,6 @@ const Navbar = () => {
               <Dropdown items={exportMenu}>
                 <Button className={classes.navbutton}>ייצוא לרצועת עזה</Button>
               </Dropdown>
-              <Dropdown items={exportMenu}>
-                <Button className={classes.navbutton}>ייבוא לרצועת עזה</Button>
-              </Dropdown>
             </Grid>
             <Grid item xs={2} className={classes.greeting}>
               <Typography variant="h5" gutterBottom>
