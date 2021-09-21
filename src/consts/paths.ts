@@ -1,4 +1,4 @@
-export const EXPORTS_REQUESTS = '/gazaExportRequests';
+export const EXPORT_REQUESTS = '/gazaExportRequests';
 export const EXPORT_SCHEDULES = '/gazaExportSchedules';
 export const NEW_REQUEST = '/newRequest';
 export const MANAGE_ENTITIES = '/manageEntities';

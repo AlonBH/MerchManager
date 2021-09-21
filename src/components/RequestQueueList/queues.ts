@@ -1,4 +1,4 @@
-export default [
+const requestQueues = [
     {
         name: 'חקלאות',
         img: './/././',
@@ -35,3 +35,5 @@ export default [
         link: 'detailCompletion'
     }
 ]
+
+export default requestQueues;

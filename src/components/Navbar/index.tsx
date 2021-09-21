@@ -12,8 +12,8 @@ import * as paths from '../../consts/paths';
 import useStyles from './styles';
 
 const exportMenu = [
-  { name: 'בקשות', link: paths.NEW_REQUEST },
-  { name: 'תיאומים', link: paths.MANAGE_ENTITIES },
+  { name: 'בקשות', link: paths.EXPORT_REQUESTS },
+  { name: 'תיאומים', link: paths.EXPORT_SCHEDULES },
 ];
 
 const Navbar = () => {
