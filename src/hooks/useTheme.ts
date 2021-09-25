@@ -1,4 +1,3 @@
-import React from 'react';
 import createTheme, { ThemeOptions } from '@material-ui/core/styles/createTheme';
 
 import themes from './themes';
