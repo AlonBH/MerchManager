@@ -1,6 +1,6 @@
 import React, { useRef, useState, MouseEvent, KeyboardEvent } from 'react';
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
-import { Grow, Paper, Popper, MenuItem, MenuList, makeStyles } from '@material-ui/core';
+import { Grow, Paper, Popper, MenuItem, MenuList } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
 import { menuNavButton } from '../types/menuNavButton';

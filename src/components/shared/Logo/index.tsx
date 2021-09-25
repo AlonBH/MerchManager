@@ -11,7 +11,7 @@ const Logo = (props: Props) => {
 
   return (
     <div className={classes.root}>
-      <img src={props.src.default} />
+      <img src={props.src.default} alt="logo"/>
     </div>
   );
 };

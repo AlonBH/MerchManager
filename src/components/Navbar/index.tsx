@@ -1,23 +1,20 @@
 import React from 'react';
-import MoreVert from '@material-ui/icons/MoreVert';
-import {
-  makeStyles,
-  IconButton,
-  TextField,
-  Typography,
-  Button,
-  Toolbar,
-  AppBar,
-  Grid,
-} from '@material-ui/core';
+import { Typography, Button, Toolbar, AppBar, Grid } from '@material-ui/core';
 
 import { Logo, Dropdown } from '../shared/index';
 
 import { truckImg, sunImg } from '../../assets/images';
 
-import { exportMenu, moreOptionsMenu } from './data';
+import RequestSearch from './RequestSearch';
+import MoreOptionsMenu from './RequestSearch/MoreOptionsMenu';
+import * as paths from '../../consts/paths';
 
 import useStyles from './styles';
+
+const exportMenu = [
+  { name: 'בקשות', link: paths.EXPORT_REQUESTS },
+  { name: 'תיאומים', link: paths.EXPORT_SCHEDULES },
+];
 
 const Navbar = () => {
   const classes = useStyles();
@@ -27,7 +24,7 @@ const Navbar = () => {
       <AppBar position="static">
         <Toolbar className={classes.bar}>
           <Grid className={classes.toolbarGrid} container>
-            <Grid item xs={7} className={classes.logoContainer}>
+            <Grid item xs={6} className={classes.logoContainer}>
               <div className={classes.logoSection}>
                 <Logo src={truckImg} />
                 <span className={classes.title}>יובל</span>
@@ -35,29 +32,20 @@ const Navbar = () => {
               <Dropdown items={exportMenu}>
                 <Button className={classes.navbutton}>ייצוא לרצועת עזה</Button>
               </Dropdown>
-              <Dropdown items={exportMenu}>
-                <Button className={classes.navbutton}>ייבוא לרצועת עזה</Button>
-              </Dropdown>
             </Grid>
-            <Grid item xs={4} className={classes.search}>
+            <Grid item xs={2} className={classes.greeting}>
               <Typography variant="h5" gutterBottom>
                 צהריים טובים אלון!
               </Typography>
               <div className={classes.sunLogo}>
                 <Logo src={sunImg} />
               </div>
-              <TextField
-                id="outlined-basic"
-                label="לפי מה לחפש?"
-                variant="outlined"
-              />
+            </Grid>
+            <Grid item xs={3} className={classes.search}>
+              <RequestSearch />
             </Grid>
             <Grid item xs={1} className={classes.actions}>
-              <Dropdown items={moreOptionsMenu}>
-                <IconButton>
-                  <MoreVert />
-                </IconButton>
-              </Dropdown>
+              <MoreOptionsMenu />
             </Grid>
           </Grid>
         </Toolbar>
