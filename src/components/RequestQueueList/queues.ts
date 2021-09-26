@@ -35,6 +35,11 @@ const requestQueues = [
         link: 'arbel'
     },
     {
+        name: 'ארב״ל',
+        img: './/././',
+        link: 'arbel'
+    },
+    {
         name: 'השלמת פרטים',
         img: './/././',
         link: 'detailCompletion'
