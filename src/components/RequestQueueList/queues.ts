@@ -30,6 +30,16 @@ const requestQueues = [
         link: 'chemistDiagnosis'
     },
     {
+        name: 'ארב״ל',
+        img: './/././',
+        link: 'arbel'
+    },
+    {
+        name: 'ארב״ל',
+        img: './/././',
+        link: 'arbel'
+    },
+    {
         name: 'השלמת פרטים',
         img: './/././',
         link: 'detailCompletion'
