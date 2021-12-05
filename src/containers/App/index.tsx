@@ -4,9 +4,10 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import { makeStyles } from '@material-ui/core';
 import CssBaseline from "@material-ui/core/CssBaseline";
 
-import Navbar from '../../components/Navbar';
-import Queue from '../../containers/Queue';
-import RequestQueueList from '../../components/RequestQueueList';
+import Navbar from 'components/Navbar';
+import Queue from 'containers/Queue';
+import RequestQueueList from 'components/RequestQueueList';
+import Request from 'containers/Request';
 import './App.css';
 
 import useTheme from 'hooks/useTheme';
@@ -35,8 +36,11 @@ const App = () => {
               <Route exact path="/gazaExportRequests">
                 <RequestQueueList />
               </Route>
-              <Route path={"/gazaExportRequests/:queueId"}>
+              <Route exact path={'/gazaExportRequests/:queueId'}>
                 <Queue />
+              </Route>
+              <Route path={'/gazaExportRequests/:queueId/:requestId'}>
+                <Request />
               </Route>
               <Route path="/gazaExportSchedules">Schedules</Route>
             </Switch>
