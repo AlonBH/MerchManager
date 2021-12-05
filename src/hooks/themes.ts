@@ -5,9 +5,12 @@ import {
   deepPurple,
 } from '@material-ui/core/colors';
 
-export default {
+const themes = {
   prodTheme: {
     palette: {
+      background: {
+        default: "red"
+      },
       type: 'dark',
       primary: {
         main: deepOrange[900],
@@ -26,6 +29,11 @@ export default {
       secondary: {
         main: lightBlue[500],
       },
+      background: {
+        default: "#EEEEEE"
+      },
     },
   },
 };
+
+export default themes;

@@ -2,13 +2,14 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { ThemeProvider } from '@material-ui/core/styles';
 import { makeStyles } from '@material-ui/core';
+import CssBaseline from "@material-ui/core/CssBaseline";
 
 import Navbar from '../../components/Navbar';
 import Queue from '../../containers/Queue';
 import RequestQueueList from '../../components/RequestQueueList';
 import './App.css';
 
-import useTheme from '../../hooks/useTheme';;
+import useTheme from 'hooks/useTheme';
 
 const useStyles = makeStyles({
   root: {
@@ -23,6 +24,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <ThemeProvider theme={useTheme()}>
+        <CssBaseline />
         <div className="App">
           <Navbar />
           <div className={classes.root}>
