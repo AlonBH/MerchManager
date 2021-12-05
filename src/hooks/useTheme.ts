@@ -1,16 +1,26 @@
-import createTheme, { ThemeOptions } from '@material-ui/core/styles/createTheme';
+import {
+  responsiveFontSizes,
+  createTheme,
+  ThemeOptions,
+} from '@material-ui/core/styles';
 
 import themes from './themes';
 
 const useTheme = (): ThemeOptions => {
-  switch(process.env.NODE_ENV){
+  let theme;
+  switch (process.env.NODE_ENV) {
     case 'development':
-      return createTheme(themes.devTheme as ThemeOptions);
+      theme = createTheme(themes.devTheme as ThemeOptions);
+      break;
     case 'production':
-      return createTheme(themes.prodTheme as ThemeOptions);
+      theme = createTheme(themes.prodTheme as ThemeOptions);
+      break;
     default:
-      return createTheme();
+      theme = createTheme();
+      break;
   }
+
+  return responsiveFontSizes(theme);
 };
 
 export default useTheme;
