@@ -20,11 +20,12 @@ const QueuePreview = (props: Props) => {
   const classes = useStyles();
 
   return (
-    <Link to={props.link}>
+    <Link className={classes.link} to={props.link}>
       <Card>
         <CardActionArea>
           <CardMedia
             className={classes.media}
+            component="img"
             image={props.imgSrc}
             title={props.name}
           />

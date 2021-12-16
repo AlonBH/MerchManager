@@ -21,8 +21,8 @@ const RequestSearch = () => {
         <Select
         onChange={(event) => setSelectedOption((event as ChangeEvent<HTMLSelectElement>).target.value)}
         >
-          {requestSearchOptions.map( (option: string) => (
-            <MenuItem value={option}>{option}</MenuItem>
+          {requestSearchOptions.map( (option: string, index: number) => (
+            <MenuItem key={index} value={option}>{option}</MenuItem>
           ))}
         </Select>
       </FormControl>
