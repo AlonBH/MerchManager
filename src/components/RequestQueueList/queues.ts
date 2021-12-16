@@ -1,47 +1,42 @@
 const requestQueues = [
     {
         name: 'חקלאות',
-        img: './/././',
-        link: 'agricultore'
+        img: 'assets/images/tractor.png',
+        link: 'agriculture'
     },
     {
         name: 'מגזר פרטי',
-        img: './/././',
+        img: 'assets/images/shopping-cart.png',
         link: 'privateSector'
     },
     {
         name: 'איכות הסביבה',
-        img: './/././',
+        img: 'assets/images/earth.png',
         link: 'environment'
     },
     {
         name: 'תחבורה',
-        img: './/././',
+        img: 'assets/images/car.png',
         link: 'transportation'
     },
     {
         name: 'אבחון שב״כ',
-        img: './/././',
+        img: 'assets/images/spy.png',
         link: 'shabakDiagnosis'
     },
     {
         name: 'אבחון כימאי',
-        img: './/././',
+        img: 'assets/images/chemist.png',
         link: 'chemistDiagnosis'
     },
     {
         name: 'ארב״ל',
-        img: './/././',
-        link: 'arbel'
-    },
-    {
-        name: 'ארב״ל',
-        img: './/././',
+        img: 'assets/images/international.png',
         link: 'arbel'
     },
     {
         name: 'השלמת פרטים',
-        img: './/././',
+        img: 'assets/images/file.png',
         link: 'detailCompletion'
     }
 ]

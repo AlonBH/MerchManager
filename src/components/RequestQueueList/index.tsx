@@ -9,9 +9,9 @@ const RequestQueueList = () => {
 
   return (
     <Grid container spacing={3}>
-      {queues.map(({ name, img, link }) => (
-        <Grid item xs={3}>
-          <QueuePreview name={name} imgSrc={img} link={`${url}/${link}`} />
+      {queues.map(({ name, img, link }, index) => (
+        <Grid key={index} item xs={3}>
+          <QueuePreview name={name} imgSrc={`${process.env.PUBLIC_URL}/${img}`} link={`${url}/${link}`} />
         </Grid>
       ))}
     </Grid>
