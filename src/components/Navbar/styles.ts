@@ -8,7 +8,6 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   bar: {
     display: 'flex',
-    justifyContent: 'flex-start',
     height: '64px',
   },
   menuButton: {
@@ -41,15 +40,19 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   sunLogo: {
     height: '80%',
-  },
-  search: {
-    display: 'flex',
+    padding:'0 10px'
   },
   actions: {
     display: 'flex',
     justifyContent: 'flex-end',
     alignItems: 'center',
   },
+  doubleSpacing: {
+    flexGrow: 2,
+  },
+  spacing: {
+    flexGrow: 1,
+  }
 }));
 
 export default useStyles;
