@@ -6,6 +6,8 @@ import {
 } from '@material-ui/core';
 import SidePanelSubject from './SidePanelSubject';
 
+import useStyles from './styles';
+
 const data = [
   {
     rows: [
@@ -35,12 +37,14 @@ const data = [
 ];
 
 const RequestDetails = () => {
+  const classes = useStyles();
+
   return (
-    <Card style={{ width: '100%' }}>
+    <Card className={classes.root}>
       <CardHeader
         title="מגזר פרטי"
         subheader="ערעור"
-        style={{ height: '100px' }}
+        className={classes.detailsHeader}
       />
       <CardContent>
         {data.map((x, index) => (
